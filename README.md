@@ -63,15 +63,19 @@ The elapsed time will display after any command is executed.
 1. Start the stopwatch by pressing S. You'll see:
   ```plaintext
   Stopwatch Started!
+
 2. The elapsed time updates every second:
   ```plaintext
   Time Elapsed: 00:00:10
+
 3. Stop the stopwatch by pressing T. You'll see:
   ```plaintext
   Stopwatch Stopped!
+
 4. Reset the stopwatch by pressing R. You'll see:
   ```plaintext
   Stopwatch Reset!
+  
 5. Quit the application by pressing Q. The program will display:
   ```plaintext
   Goodbye!
