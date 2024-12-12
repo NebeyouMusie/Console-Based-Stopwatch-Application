@@ -56,8 +56,8 @@ The elapsed time will display after any command is executed.
    ```bash
    dotnet build
 3. Run the program
-  ```bash
-   dotnet run
+    ```bash
+    dotnet run
 
 ## Example Usage
 1. Start the stopwatch by pressing S. You'll see:
