@@ -56,7 +56,7 @@ namespace ConsoleStopwatch
             OnReset?.Invoke("Stopwatch Reset!");
         }
 
-        private void Tick(object state)
+        private void Tick(object? state)
         {
             _timeElapsed = _timeElapsed.Add(TimeSpan.FromSeconds(1));
             Console.Clear();
