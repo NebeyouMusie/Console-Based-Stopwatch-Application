@@ -11,11 +11,12 @@ namespace ConsoleStopwatch
     {
         private TimeSpan _timeElapsed;
         private bool _isRunning;
-        private Timer _timer;
 
-        public event StopwatchEventHandler OnStarted;
-        public event StopwatchEventHandler OnStopped;
-        public event StopwatchEventHandler OnReset;
+        // Allow these to be null initially
+        private Timer? _timer;
+        public event StopwatchEventHandler? OnStarted;
+        public event StopwatchEventHandler? OnStopped;
+        public event StopwatchEventHandler? OnReset;
 
         public Stopwatch()
         {
