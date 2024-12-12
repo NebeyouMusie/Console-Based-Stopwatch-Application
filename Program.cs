@@ -12,11 +12,12 @@ namespace ConsoleStopwatch
         private TimeSpan _timeElapsed;
         private bool _isRunning;
 
-        // Allow these to be null initially
+        // Initialize events with no-op delegate to avoid nullability warnings
+        public event StopwatchEventHandler OnStarted = _ => { };
+        public event StopwatchEventHandler OnStopped = _ => { };
+        public event StopwatchEventHandler OnReset = _ => { };
+
         private Timer? _timer;
-        public event StopwatchEventHandler? OnStarted;
-        public event StopwatchEventHandler? OnStopped;
-        public event StopwatchEventHandler? OnReset;
 
         public Stopwatch()
         {
@@ -33,7 +34,7 @@ namespace ConsoleStopwatch
             }
 
             _isRunning = true;
-            OnStarted?.Invoke("Stopwatch Started!");
+            OnStarted("Stopwatch Started!");
             _timer = new Timer(Tick, null, 0, 1000);
         }
 
@@ -47,14 +48,14 @@ namespace ConsoleStopwatch
 
             _isRunning = false;
             _timer?.Dispose();
-            OnStopped?.Invoke("Stopwatch Stopped!");
+            OnStopped("Stopwatch Stopped!");
         }
 
         public void Reset()
         {
             Stop();
             _timeElapsed = TimeSpan.Zero;
-            OnReset?.Invoke("Stopwatch Reset!");
+            OnReset("Stopwatch Reset!");
         }
 
         private void Tick(object? state)
