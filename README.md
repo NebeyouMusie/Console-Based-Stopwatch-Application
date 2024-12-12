@@ -54,25 +54,25 @@ The elapsed time will display after any command is executed.
 1. Clone the repository or copy the source code into a `.cs` file.
 2. Build the program using the .NET CLI:
    ```bash
-   dotnet build ```
+   dotnet build
 3. Run the program
   ```bash
-   dotnet run ```
+   dotnet run
 
 ## Example Usage
 1. Start the stopwatch by pressing S. You'll see:
   ```plaintext
-  Stopwatch Started!```
+  Stopwatch Started!
 2. The elapsed time updates every second:
   ```plaintext
-  Time Elapsed: 00:00:10```
+  Time Elapsed: 00:00:10
 3. Stop the stopwatch by pressing T. You'll see:
   ```plaintext
-  Stopwatch Stopped!```
+  Stopwatch Stopped!
 4. Reset the stopwatch by pressing R. You'll see:
-```plaintext
-Stopwatch Reset!```
+  ```plaintext
+  Stopwatch Reset!
 5. Quit the application by pressing Q. The program will display:
   ```plaintext
-  Goodbye!```
+  Goodbye!
 
